@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+::selection {
+    color: black;
+    background: teal;
+
+}
+body{
+    line-height: 1.6;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-btn {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hide {
+    display: none; /* Hide the navbar */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        background-color: transparent;  /* Make the background transparent */
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 15px 0;
+    }
+
+    .hide {
+        display: block !important; /* Show the navbar when the 'hide' class is present */
+    }
+}
+
+
+h1 {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+@-webkit-keyframes colours {
+    0% {background-color: #39f;}
+   15% {background-color: #8bc5d1;}
+   30% {background-color: #f8cb4a;}
+   45% {background-color: #95b850;}
+   60% {background-color: #944893;}
+   75% {background-color: #c71f00;}
+   90% {background-color: #bdb280;}
+  100% {background-color: #39f;}
+}
+
+
+h1{
+    font-size: 6vw;
+    font-weight: bold;
+    text-align: center;
+    margin: 2vw 0 3vw 0;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vw;
+}
+
+  
+  /* Style for the search input */
+#search-input {
+    width: 64vw;
+    padding: 1.15vw;
+    border: 0.15vw solid #ccc;
+    border-radius: 7vw;
+    outline: none;
+    font-size: 1.25vw;
+}
+
+  
+  /* Style for the search button */
+#search-button {
+    position: absolute;
+    padding-top: 13px;
+    transform: translate(26vw);
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 1.25vw;
+    border-radius: 4.5vw;
+    cursor: pointer;
+    width: 13vw;
+}
+
+  
+  /* Hover effect for the button */
+  .search-button:hover {
+    background-color: #2980b9;
+  }
+  
+
+.search-results{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.search-result{
+    margin-bottom: 60px;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.search-result img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    transition: opacity 0.2s ease-in-out;
+}
+.search-result:hover img{
+    opacity: .8;
+}
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+#show-more-button {
+    background-color: #008cba;
+    font-size: 18px;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor: pointer;
+     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .search-results{
+        padding: 20px;
+    }
+    .search-result{
+        width: 45%;
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .search-result{
+        width: 100%;
+    }
+    
+}
